@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" = "Get" ]; then
-   # $2 would be the name 'DNS-Server'
+   # $2 would be the name 'PiHole'
    # $3 would be the charactersistic 'On'
    state=$(pihole status | grep -c Enabled)
    if [[ "$state" = "0" ]]; then
@@ -14,7 +14,7 @@ if [ "$1" = "Get" ]; then
 fi
 
 if [ "$1" = "Set" ]; then
-   # $2 would be the name 'DNS-Server'
+   # $2 would be the name 'PiHole'
    # $3 would be the the charactersistic 'On'
    # $4 would be '0' for 'Off', '1' for 'On'
 
