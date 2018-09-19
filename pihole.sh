@@ -18,10 +18,10 @@ if [ "$1" = "Set" ]; then
    # $3 would be the the charactersistic 'On'
    # $4 would be '0' for 'Off', '1' for 'On'
 
-   if [ "$4" = "0" ]; then
+   if [ $4 = true ]; then
       pihole enable
       exit $?
-   elif [ "$4" = "1" ]; then
+   elif [ $4 = false ]; then
       pihole disable
       exit $?
    fi
